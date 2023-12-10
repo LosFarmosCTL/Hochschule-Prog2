@@ -15,6 +15,12 @@ public class Administration implements AdministrationInterface {
         if (persons == null)
             throw new NullPointerException("List of persons cannot be null");
 
+        for (person : persons) {
+            if (person == null) {
+                throw new NullPointerException("List of persons cannot contain null references");
+            }
+        }
+
         this.persons = persons;
     }
 
